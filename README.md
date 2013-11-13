@@ -8,7 +8,7 @@
 
 # Install
 
-	* Configure `config/database.yml`
+	* Configure `config/station.yml`
 
 # Use
 	
