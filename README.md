@@ -1,4 +1,4 @@
-# WCore
+# WUploader
 	
 	Created for use with WCore
 
