@@ -12,7 +12,7 @@ class CollectData
 	def initialize()
 		puts "Initialized"
 		@data_list = Hash.new
-
+		#miniconfig...
 		@station = YAML.load(ERB.new(File.read('config/station.yml')).result) || {}
 
 	end
@@ -24,7 +24,7 @@ class CollectData
     puts "Last sended: #{last} Sending #{@data_list.length}"
 
 		if (@data_list.length >= 1) then
-			postData = Net::HTTP.post_form(URI.parse(@station['url_post']), {'data'=>@data_list.to_json})
+			postData = Net::HTTP.post_form(URI.parse(@station['url_post']), {'data'=>@data_list.to_json, 'token'=>@station['token']})
 				
 			if (postData.body == 'ok') then
 				last = @data_list.keys.last
