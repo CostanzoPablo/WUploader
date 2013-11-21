@@ -8,9 +8,10 @@
 
 # Install
 
+  * Copy `config/station.yml-sample` to `config/station.yml`
 	* Configure `config/station.yml`
 
 # Use
 	
-	* Run: `ruby start.rb`
+	* Run: `bundle exec ruby start.rb`
 
