@@ -5,7 +5,7 @@ require 'json'
 require 'yaml'
 require 'sinatra/activerecord'
 
-environment = ENV['RAKE_ENV'] || 'development'
+environment = ENV['RACK_ENV'] || 'development'
 
 
 class CollectData
